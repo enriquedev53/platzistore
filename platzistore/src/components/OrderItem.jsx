@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import AppContext from '@context/AppContext';
-import close from '@icons/icon_close.png'
+import close from '@icons/icon_close.png';
 import styles from '@styles/OrderItem.module.scss';
 
 const OrderItem = ({ product }) => {
