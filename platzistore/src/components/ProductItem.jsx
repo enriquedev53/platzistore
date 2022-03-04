@@ -10,8 +10,8 @@ const ProductItem = ({ product }) => {
 
 	const handleClick = item => {
 		console.log('in cart: ', state.cart.includes(item));
-		addToCart(item)
-	}
+		addToCart(item);
+	};
 
 	return (
 		<div className={styles.ProductItem}>
@@ -21,7 +21,11 @@ const ProductItem = ({ product }) => {
 					<p>${product.price}</p>
 					<p>{product.title}</p>
 				</div>
-				<figure className={styles['more-clickable-area']} onClick={() => handleClick(product)} >
+				<figure
+					className={styles['more-clickable-area']}
+					onClick={() => handleClick(product)}
+					aria-hidden="true"
+				>
 					{state.cart.includes(product) ? <Image
 						className={styles.disabled, styles['add-to-cart-btn']}
 						src={addedToCartImage}
@@ -31,6 +35,6 @@ const ProductItem = ({ product }) => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default ProductItem;

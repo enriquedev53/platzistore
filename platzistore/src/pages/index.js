@@ -1,5 +1,6 @@
 import ProductList from '@containers/ProductList';
-import Head from 'next/Head';
+import Head from 'next/head';
+
 export default function Home() {
   return (
     <>
